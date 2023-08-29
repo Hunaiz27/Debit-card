@@ -1,0 +1,200 @@
+*{
+  box-sizing:border-box;;
+}
+
+body, html{
+  margin:0;
+  padding:0;
+  height: 100%;
+  width: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+width: 400px;
+height: 300px;
+perspective: 600px;
+  
+}
+
+.card__front{
+    box-shadow: 1px 1px #aaa3a3;
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    display: inline-block;
+    width: 400px;
+    height: 250px;
+    background-image: url(map.jpg), linear-gradient(to right bottom, #fd696b, #fa616e, #f65871, #f15075, #ec4879);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    transition: all .5s;
+    transition-timing-function:cubic-bezier()
+    backface-visibility: hidden;
+    padding: 18px;
+}
+
+
+.bank {
+    height: 35px;
+}
+.touch{
+     height: 40px;
+    position: absolute;
+    top: 70px; right: 15px
+}
+.visa{
+    height: 130px;
+    position: absolute;
+    top:-30px;
+    right: 18px;
+}
+.chip {
+    position: absolute;
+    top: 90px; left: 40px;
+    border-radius: 5px;
+    height: 32px;
+}
+
+.card_number {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    position: relative; top: 50px;
+    font-family: monospace;
+
+}
+
+.card_holder {
+    width: 70%;
+    float: left;
+    position: relative; top: 60px;left: 13px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family:monospace;
+}
+
+.card_expiry {
+    width: 30%;
+    float: left;  position: relative; top: 60px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+.card__back {
+    box-shadow: 1px 1px #aaa3a3;
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    display: inline-block;
+    width: 400px;
+    height: 250px;
+    background-image: url(map.jpg), linear-gradient(to right bottom, #fd696b, #fa616e, #f65871, #f15075, #ec4879);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    transition: all .5s;
+    backface-visibility: hidden;
+    padding: 18px 0;
+    transform: rotateY(-180deg);
+}
+
+.card_black-line {
+    margin-top: 5px;
+    height: 45px;
+    background-color: #303030;
+}
+
+.card_back-content {
+    padding: 15px 15px 0;
+}
+.card_secret {
+    padding: 5px 12px;
+    background-color: #fff;
+    position:relative; bottom:25px; 
+    text-align: right;
+    font-size: 14px;
+    height: 45px;
+}
+.pattern{
+    height: 53px;
+    width: 330px;
+    position: relative; bottom:53px; right: 30px
+}
+.call{
+     font-size: 08px;
+    font-family: sans-serif;
+    color: white;
+    line-height:15px;
+    letter-spacing: 1px;
+    position: relative; bottom: 85px; left: 5px;
+}
+.notify{
+    font-size: 08px;
+    font-family: sans-serif;
+    color: white;
+    line-height:15px;
+    letter-spacing: 1px;
+    position: relative; bottom: 20px;
+}
+
+.card_back-logo {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    height: 35px;
+}
+.onelink {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 10%;
+    border-radius: 5px
+}
+
+
+.card:hover .card__front {
+    transform: rotateY(180deg);
+
+}
+
+.card:hover .card__back {
+    transform: rotateY(0deg);
+}
+
+.fa-caret-left{
+    color: white;
+    position:absolute; bottom: 115px;
+    left:20px;
+}
